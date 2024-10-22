@@ -11,7 +11,7 @@ const Register = () => {
     const next = () => {
         navigate('/');
     };
-    // const Combine = () => {
+    const Combine = () => {
     //   const [details, setDetails] = useState([])
 
     //   const addDetails = async (detail) => {
@@ -33,15 +33,15 @@ const Register = () => {
         
         
         
-    //     next();
+         next();
         
-    // }
+    }
 
   return (
     <>
     <h1>Register Complete</h1>
 
-    <button >Main Menu</button>
+    <button onClick={Combine}>Main Menu</button>
     </>
   )
 }

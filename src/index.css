@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(211,211,211,0.753);
 }
 
 code {
@@ -13,6 +14,7 @@ code {
 }
 
 .container {
+  background-color: white;
   max-width: 1000px;
   margin: 30px auto;
   overflow: auto;
@@ -174,6 +176,12 @@ input[type="file"]::file-selector-button:hover {
   background-color: #0056b3;
 }
 
-
+.form-control-check {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 20px 0;
+  flex-direction: column;
+}
 
 

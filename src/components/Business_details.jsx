@@ -144,6 +144,20 @@ const Business_details = (businessAdd) => {
             <label>Upload any Beauty Certificate</label>
             <input type="file" value={certificate} onChange={(e) => setCertificate(e.target.value)} multiple/>
         </div><br /><br />
+        <div className="form-control-check">
+                    <label>I've read and accepted the<Link to='/Terms&Conditions'>Terms & Conditions</Link></label>
+                        <input
+                        type="checkbox"
+                        required
+                        />
+                        <br /><br />
+                    <label>I would like to receive email on all the latest news, promos and updates from Businesses.</label>
+                        <input
+                        type="checkbox"
+                        required
+                        />
+                        
+        </div><br /><br />
         <input type="submit" value="Join us As Partner" className="regBtn"/>
     </form>
 

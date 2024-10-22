@@ -7,6 +7,7 @@ import Main from './components/Main';
 import Personal_details from './components/Personal_details';
 import Business_details from './components/Business_details';
 import Register from './components/Register';
+import TermsConditions from './components/TermsConditions';
 
 function App() {
   
@@ -18,12 +19,12 @@ function App() {
       <div className="container">
         <Routes>
           <Route exact path="/" element={<Main />}/>
+          <Route path='/Terms&Conditions' element={<TermsConditions />}/>
           <Route exact path="/Login" element={<LogPage />} />
           <Route exact path='/Register' element={<Register />} />
           <Route exact path="/Register/Credentials" element={<RegPage />} />
           <Route exact path="/Register/Personal" element={<Personal_details />} />
           <Route exact path='/Register/Business' element={<Business_details />} />
-
         </Routes>
       </div>
     </Router>

@@ -12,6 +12,10 @@ const Main = () => {
         navigate('/Register/Credentials');
     };
 
+    const Terms = () => {
+      navigate('/Terms&Conditions')
+    }
+
 
   return (
     <>
@@ -19,6 +23,8 @@ const Main = () => {
     <button onClick={Log}>Login Page</button>
     <br /><br /><br />
     <button onClick={Reg}>Register Page</button>
+    <br /><br /><br />
+    <button onClick={Terms}>Terms & Conditions</button>
     </>
   )
 }
