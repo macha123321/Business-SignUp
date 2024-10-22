@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
+  font-family: "Signika Negative", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgba(211,211,211,0.753);
@@ -14,6 +17,7 @@ code {
 }
 
 .container {
+  font-family: "Signika Negative", sans-serif;
   background-color: white;
   max-width: 1000px;
   margin: 30px auto;
@@ -184,4 +188,9 @@ input[type="file"]::file-selector-button:hover {
   flex-direction: column;
 }
 
-
+.signika-negative-font {
+  font-family: "Signika Negative", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
