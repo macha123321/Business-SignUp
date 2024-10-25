@@ -1,3 +1,14 @@
 {
-    "Details":[]
+    "Details":[
+        {
+            "id": "0001",
+            "fname" : "Nasir",
+            "lname": "Rashid",
+            "gender": "Male",
+            "btype": "IT",
+            "bname": "Cosonas",
+            "about": "its a computer company",
+            "address": "somewhere"
+        }
+    ]
 }

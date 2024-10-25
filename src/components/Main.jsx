@@ -16,6 +16,10 @@ const Main = () => {
       navigate('/Terms&Conditions')
     }
 
+    const Admin = () => {
+      navigate('/Admin')
+    }
+
 
   return (
     <>
@@ -24,7 +28,10 @@ const Main = () => {
     <br /><br /><br />
     <button onClick={Reg}>Register Page</button>
     <br /><br /><br />
+    <button onClick={Admin}>Administrator Dashboard</button>
+    <br /><br /><br />
     <button onClick={Terms}>Terms & Conditions</button>
+    <br /><br /><br />
     </>
   )
 }

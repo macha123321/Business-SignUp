@@ -78,6 +78,7 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: #0056b3;
+  transition: .5s;
 }
 
 a {
@@ -89,6 +90,7 @@ a {
 
 a:hover {
   color: #0056b3;
+  transition: .5s;
 }
 
 /* button {
@@ -128,6 +130,7 @@ button {
 
 button:hover{
   background-color: #0056b3;
+  transition: 0.5s;
 }
 
 input[type="date"] {
@@ -193,4 +196,32 @@ input[type="file"]::file-selector-button:hover {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
+}
+
+.admin-container {
+  font-family: "Signika Negative", sans-serif;
+  background-color: rgb(201, 201, 201);
+  max-width: 1000px;
+  margin: 30px auto;
+  overflow: auto;
+  min-height: 300px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.admin-box {
+  font-family: "Signika Negative", sans-serif;
+  background-color: rgb(224, 224, 224);
+  max-width: 1000px;
+  margin: 30px auto;
+  overflow: auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+p {
+  word-wrap: break-word;
+  white-space: normal;
 }

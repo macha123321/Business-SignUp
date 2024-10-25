@@ -8,6 +8,7 @@ import Personal_details from './components/Personal_details';
 import Business_details from './components/Business_details';
 import Register from './components/Register';
 import TermsConditions from './components/TermsConditions';
+import Admin_dashboard from './components/Admin_dashboard';
 
 function App() {
   
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Main />}/>
           <Route path='/Terms&Conditions' element={<TermsConditions />}/>
+          <Route path='/Admin' element={<Admin_dashboard />}/>
           <Route exact path="/Login" element={<LogPage />} />
           <Route exact path='/Register' element={<Register />} />
           <Route exact path="/Register/Credentials" element={<RegPage />} />
