@@ -8,7 +8,6 @@ const RegPage = ({regAdd}) => {
     const [again, setAgain] = useState('');
     const [phone, setPhone] = useState('');
 
-
     const navigate = useNavigate();
 
     const next = () => {
@@ -19,6 +18,11 @@ const RegPage = ({regAdd}) => {
     
 
     const onNext = (e) => {
+
+        if (password.length < 8) {
+            alert ('Password must be atleast 8 characters long')
+            return
+        }
         
         if (password !== again) {
             alert ('Both Passwords Must Match')
