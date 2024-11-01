@@ -46,7 +46,11 @@ const Admin_dashboard = () => {
         <p>Owner: {gen}. {detail.fname || 'First Name Not Provided'} {detail.lname || 'Last Name Not Provided'}</p> 
         <p>Type: {detail.btype || 'Business Type Not Provided'}</p> 
         <p>About: {detail.about || 'About Not Provided'}</p> 
-        <p>Location: {detail.based || 'Location Not Provided'}</p> 
+        <p>Location: {detail.based || 'Location Not Provided'}, {detail.address || 'Address Not Provided'}, {detail.postCode || 'Post Code Not Provided'}</p> 
+        <p>Email: {detail.email || 'Email Not Provided'}</p>
+        <p>Phone Number: {detail.phone || 'Phone Number Not Provided'}</p>
+        <p>Date of Birth: {detail.DOB || 'Date of Birth Not Provided'}</p>
+        <p>Registration Number: {detail.regNum || 'Registration Number Not Provided'}</p>
         <FaTimes style={{ color: 'red', cursor: 'pointer' }}
                  onClick={() => deleteInfo(detail.id)} /> 
       </div> 
