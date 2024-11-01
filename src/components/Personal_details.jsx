@@ -1,64 +1,41 @@
-import React, { useState } from "react";
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react'; 
+import { Link, useLocation, useNavigate } from 'react-router-dom'; 
 
-const Personal_details = (personalAdd) => {
-
-    const [DOB, setDOB] = useState('');
-    const [fname, setFname] = useState('');
-    const [lname, setLname] = useState('');
-
-    const navigate = useNavigate();
-
-    const next = () => {
-        navigate('/Register/Business');
-    };
-
-
-    const [gender, setSelectedCheckbox] = useState(null);
-      
-    const handleCheckboxChange = (event) => {
-        setSelectedCheckbox(event.target.value);
-    };
-
-    const onNext = (e) => {
-        e.preventDefault()
-        let today = new Date ();
-        let day = today.getDate();
-        let month = today.getMonth() + 1;
-        let year = today.getFullYear();
-        if (day < 10) {
-            day = '0' + day;
-          }
-        if (month < 10) {
-            month = '0' + month;
-          }
-
-        today = `${year}-${month}-${day}`;
-        
-        if (today <= DOB) {
-            alert ('Please enter a valid Date of Birth')
-            return
-        }
-
-        let DOBYear = DOB.slice(0,4)
-        let DOBMonth = DOB.slice(5,7)
-        let DOBDay = DOB.slice(8,10)        
-            
-
-        if (DOBYear > (year-18) ) {
-                    alert ('You need to be above 18 years old to register')
-                    return
-        }
-        //personalAdd({ fname, lname, gender, DOB})
-        next();
+const Personal_details = () => { 
+    const [DOB, setDOB] = useState(''); 
+    const [fname, setFname] = useState(''); 
+    const [lname, setLname] = useState(''); 
+    const [gender, setSelectedCheckbox] = useState(null); 
+    const navigate = useNavigate(); 
+    const location = useLocation(); 
+    const { id } = location.state; 
     
-    }
+    const handleCheckboxChange = (event) => { 
+        setSelectedCheckbox(event.target.value); 
+    }; 
+        
+        const onNext = async (e) => { 
+            e.preventDefault(); 
+            
+            const personal = { DOB, fname, lname, gender }; 
+            
+            const res = await fetch(`http://localhost:5000/Details/${id}`); 
+            
+            const data = await res.json(); 
+            
+            const updatedData = { ...data, ...personal }; 
+            await fetch(`http://localhost:5000/Details/${id}`, 
+                { method: 'PUT', headers: { 'Content-type': 'application/json' }, 
+                body: JSON.stringify(updatedData) }); 
+                
+                navigate('/Register/Business', { state: { id } });
+  };
+
   return (
     <>
-    <h1>Personal Details</h1>
-    <form className="add-form" onSubmit={onNext}>
-    <div className="form-control">
+      <h1>Personal Details</h1>
+      <form className="add-form" onSubmit={onNext}>
+      <div className="form-control">
                 <label>*First Name</label>
                 <input 
                     type="text"
@@ -116,12 +93,12 @@ const Personal_details = (personalAdd) => {
                     </input><br /><br /> 
                 </div>
                 <input type="submit" value='Next' className="nextbtn"/>
-            </form>
-            <Link to='/Register/Credentials'>Go Back</Link>
-            <Link to='/Login'>Already Have an Account?</Link>
-            <Link to='/'>Main Menu</Link>
-            </>
-  )
-}
+      </form>
+      <Link to='/Register/Credentials'>Go Back</Link>
+      <Link to='/Login'>Already Have an Account?</Link>
+      <Link to='/'>Main Menu</Link>
+    </>
+  );
+};
 
-export default Personal_details
+export default Personal_details;

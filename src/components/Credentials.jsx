@@ -1,44 +1,41 @@
-import React, { useState } from "react";
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-
-const RegPage = ({regAdd}) => {
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
+  
+  const RegPage = () => { 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [again, setAgain] = useState('');
     const [phone, setPhone] = useState('');
-
     const navigate = useNavigate();
-
-    const next = () => {
-        navigate('/Register/Personal');
-    };
-    
-
-    
-
-    const onNext = (e) => {
-
+     const onNext = async (e) => {
+        e.preventDefault();
+         
         if (password.length < 8) {
-            alert ('Password must be atleast 8 characters long')
-            return
-        }
-        
-        if (password !== again) {
-            alert ('Both Passwords Must Match')
-            return
-        }
-        
-        e.preventDefault()
-        //regAdd({email, password, phone})
-        next();
 
+        alert('Password must be at least 8 characters long');
+         
+        return; 
     }
-    return (
-        <>
-        <h1>Register Page</h1>
-        <form className="add-form" onSubmit={onNext}>
-            <div className="form-control">
+
+        if (password !== again) { 
+            alert('Both passwords must match'); 
+            return; 
+        } 
+        const id = uuidv4(); 
+        const credentials = { id, email, password, phone }; 
+        await fetch('http://localhost:5000/Details',
+            { method: 'POST', headers: { 'Content-type': 'application/json' }, 
+            body: JSON.stringify(credentials) }); 
+            
+            navigate('/Register/Personal', { state: { id } });
+  };
+
+  return (
+    <>
+      <h1>Register Page</h1>
+      <form className="add-form" onSubmit={onNext}>
+      <div className="form-control">
                 <label>*Email</label>
                 <input 
                     type="email"
@@ -79,13 +76,11 @@ const RegPage = ({regAdd}) => {
                     />
             </div>
             <input type="submit" value='Next' className="nextbtn"/>  
-        </form>
-        <Link to='/Login'>Already Have an Account?</Link>
-        <Link to='/'>Main Menu</Link>
-        </>
-    )
-
-}
-
+      </form>
+      <Link to='/Login'>Already Have an Account?</Link>
+      <Link to='/'>Main Menu</Link>
+    </>
+  );
+};
 
 export default RegPage;

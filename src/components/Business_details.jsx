@@ -1,43 +1,45 @@
-import React, { useState } from "react";
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react'; 
+import { Link, useLocation, useNavigate } from 'react-router-dom'; 
 
-const Business_details = (businessAdd) => {
-    const [btype, setBtype] = useState('');
-    const [bname, setBname] = useState('');
-    const [regNum, setRegNum] = useState('');
-    const [about, setAbout] = useState('');
-    const [treatment, setTreatment] = useState('');
-    const [based, setBased] = useState('');
-    const [address, setAddress] = useState('');
-    const [postCode, setPostCode] = useState('');
-    const [ID, setID] = useState('');
-    const [certificate, setCertificate] = useState('');
-
-    const [registered, setSelectedCheckbox] = useState(null);
-      
-    const handleCheckboxChange = (event) => {
-        setSelectedCheckbox(event.target.value);
-    };
-
-    const navigate = useNavigate();
-
-    const next = () => {
-        navigate('/Register');
-    };
-
-    const onSubmit = () =>{
-
-        //businessAdd({btype, registered , bname, regNum, about, treatment, based, address, postCode, ID, certificate});
-        next();
-    }
-
+const Business_details = () => { 
     
+    const [btype, setBtype] = useState(''); 
+    const [bname, setBname] = useState(''); 
+    const [regNum, setRegNum] = useState(''); 
+    const [about, setAbout] = useState(''); 
+    const [treatment, setTreatment] = useState(''); 
+    const [based, setBased] = useState(''); 
+    const [address, setAddress] = useState(''); 
+    const [postCode, setPostCode] = useState(''); 
+    const [ID, setID] = useState(''); 
+    const [certificate, setCertificate] = useState(''); 
+    const [registered, setSelectedCheckbox] = useState(null); 
+    const navigate = useNavigate(); const location = useLocation(); 
+    const { id } = location.state; 
+    
+    const handleCheckboxChange = (event) => { 
+        setSelectedCheckbox(event.target.value); 
+    }; 
+    
+    const onSubmit = async (e) => { 
+        e.preventDefault(); 
+        const business = { btype, registered, bname, regNum, about, treatment, based, address, postCode, ID, certificate }; 
+        
+        const res = await fetch(`http://localhost:5000/Details/${id}`); 
+        const data = await res.json(); const updatedData = { ...data, ...business }; 
+        
+        await fetch(`http://localhost:5000/Details/${id}`, 
+            { method: 'PUT', headers: { 'Content-type': 'application/json' }, 
+            body: JSON.stringify(updatedData) }); 
+            
+            navigate('/Register');
+  };
+
   return (
     <>
-    <h1>Business Details</h1>
-    <form className="add-form" onSubmit={onSubmit}>
-        <div className="form-control">
+      <h1>Business Details</h1>
+      <form className="add-form" onSubmit={onSubmit}>
+      <div className="form-control">
             <label>*What type of Business do you proposed?</label>
             <input 
                 type="text"
@@ -159,13 +161,13 @@ const Business_details = (businessAdd) => {
                         
         </div><br /><br />
         <input type="submit" value="Join us As Partner" className="regBtn"/>
-    </form>
-
-    <Link to='/Register/Personal'>Go Back</Link>
-    <Link to='/Login'>Already Have an Account?</Link>
-    <Link to='/'>Main Menu</Link>
+      </form>
+      <Link to='/Register/Personal'>Go Back</Link>
+      <Link to='/Login'>Already Have an Account?</Link>
+      <Link to='/'>Main Menu</Link>
     </>
-  )
-}
+  );
+};
 
-export default Business_details
+export default Business_details;
+
