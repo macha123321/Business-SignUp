@@ -16,6 +16,16 @@ const Admin_dashboard = () => {
 
   }, []);
 
+  const deleteInfo = async (id) => {
+    const res = await fetch(`http://localhost:5000/Details/${id}`, {
+      method: 'DELETE',
+    })
+
+    res.status === 200
+      ? setDetails(details.filter((detail) => detail.id !== id))
+      : alert('Error Deleting This Information')
+  }
+
   return ( 
   <> 
   <h1>Administrator Dashboard</h1> 
@@ -28,7 +38,7 @@ const Admin_dashboard = () => {
         gen = 'Ms';
       } else { 
         gen = 'Mx'; 
-      } 
+      }
       
       return ( 
       <div key={index} className="admin-box">
@@ -37,7 +47,8 @@ const Admin_dashboard = () => {
         <p>Type: {detail.btype || 'Business Type Not Provided'}</p> 
         <p>About: {detail.about || 'About Not Provided'}</p> 
         <p>Location: {detail.based || 'Location Not Provided'}</p> 
-        <FaTimes style={{ color: 'red', cursor: 'pointer' }} /> 
+        <FaTimes style={{ color: 'red', cursor: 'pointer' }}
+                 onClick={() => deleteInfo(detail.id)} /> 
       </div> 
       ); 
       })}

@@ -22,27 +22,6 @@
       "certificate": "C:\\fakepath\\Screenshot 2024-06-25 113303.png"
     },
     {
-      "id": "b379bfbd-1425-4325-bbc5-f058281f5f57",
-      "email": "Isa@example.com",
-      "password": "isajavad",
-      "phone": "1234",
-      "DOB": "2006-02-10",
-      "fname": "Isa",
-      "lname": "Javad",
-      "gender": "Male",
-      "btype": "Software Development",
-      "registered": null,
-      "bname": "Amazon",
-      "regNum": "NT21675212",
-      "about": "At amazon, we’re more than just a software company; we’re your dedicated partner in navigating the digital landscape. Founded in 2020, our mission is to transform complex technological challenges into seamless, user-friendly solutions. We specialize in crafting bespoke software tailored to meet the unique needs of our clients, from startups to Fortune 500 companies.  Our team of expert developers, designers, and strategists work collaboratively to build robust, scalable, and innovative software that drives business success. Whether it’s developing cutting-edge mobile applications, enterprise-level solutions, or cloud-based platforms, TechWave Innovations is at the forefront of technology, delivering excellence every step of the way.  Join us on our journey to redefine what’s possible in the digital world. With TechWave Innovations, your vision becomes our mission.",
-      "treatment": "Custom Software Development: Tailored solutions to address unique business needs, from mobile apps to enterprise-level systems.  Cloud Solutions: Secure, scalable cloud infrastructure and services to enhance business agility and efficiency.  UI/UX Design: Intuitive and engaging user experiences crafted to boost user satisfaction and retention.  Data Analytics: Advanced analytics and big data solutions to drive informed decision-making and uncover valuable insights.  Cybersecurity: Comprehensive security services to protect data and systems from cyber threats.  IT Consulting: Expert guidance to optimize IT strategy, improve processes, and achieve technology goals.",
-      "based": "amazon",
-      "address": "liverpool",
-      "postCode": "C12 N21",
-      "ID": "C:\\fakepath\\Screenshot 2024-06-26 122716.png",
-      "certificate": "C:\\fakepath\\Screenshot 2024-06-26 122451.png"
-    },
-    {
       "id": "008c902d-263c-45e2-b6f3-5c9a62edb1dc",
       "email": "syed@example.com",
       "password": "syedali290607",
