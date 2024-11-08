@@ -41,6 +41,48 @@
       "postCode": "ig2 7hY",
       "ID": "C:\\fakepath\\Screenshot 2024-06-27 095229.png",
       "certificate": "C:\\fakepath\\Screenshot 2024-06-26 122254.png"
+    },
+    {
+      "id": "349724a6-84d0-4d26-8079-808d8c748c19",
+      "email": "Isa@example.com",
+      "password": "password",
+      "phone": "215712563",
+      "DOB": "2005-09-08",
+      "fname": "Isa",
+      "lname": "Javad",
+      "gender": "Male",
+      "btype": "Software Development",
+      "registered": "Yes",
+      "bname": "Metatalent.ai",
+      "regNum": "MT21675212",
+      "about": "At metatalent, we’re more than just a software company; we’re your dedicated partner in navigating the digital landscape. Founded in 2020, our mission is to transform complex technological challenges into seamless, user-friendly solutions. We specialize in crafting bespoke software tailored to meet the unique needs of our clients, from startups to Fortune 500 companies.  Our team of expert developers, designers, and strategists work collaboratively to build robust, scalable, and innovative software that drives business success. Whether it’s developing cutting-edge mobile applications, enterprise-level solutions, or cloud-based platforms, TechWave Innovations is at the forefront of technology, delivering excellence every step of the way.  Join us on our journey to redefine what’s possible in the digital world. With TechWave Innovations, your vision becomes our mission.",
+      "treatment": "Custom Software Development: Tailored solutions to address unique business needs, from mobile apps to enterprise-level systems.  Cloud Solutions: Secure, scalable cloud infrastructure and services to enhance business agility and efficiency.  UI/UX Design: Intuitive and engaging user experiences crafted to boost user satisfaction and retention.  Data Analytics: Advanced analytics and big data solutions to drive informed decision-making and uncover valuable insights.  Cybersecurity: Comprehensive security services to protect data and systems from cyber threats.  IT Consulting: Expert guidance to optimize IT strategy, improve processes, and achieve technology goals.",
+      "based": "ilford",
+      "address": "ilford lane",
+      "postCode": "ig2 7hY",
+      "ID": "C:\\fakepath\\Screenshot 2024-06-25 114119.png",
+      "certificate": "C:\\fakepath\\Screenshot 2024-06-26 121759.png"
+    },
+    {
+      "id": "5c698dea-ce1d-49c5-9093-3c90a18f76a2",
+      "email": "ali@example.com",
+      "password": "password",
+      "phone": "4323242323234",
+      "DOB": "2002-07-08",
+      "fname": "Ali",
+      "lname": "Sheer Khan",
+      "gender": "Male",
+      "btype": "Software Development",
+      "registered": "Yes",
+      "bname": "Metatalent.ai",
+      "regNum": "MT21675212",
+      "about": "At metatalent, we’re more than just a software company; we’re your dedicated partner in navigating the digital landscape. Founded in 2020, our mission is to transform complex technological challenges into seamless, user-friendly solutions. We specialize in crafting bespoke software tailored to meet the unique needs of our clients, from startups to Fortune 500 companies.  Our team of expert developers, designers, and strategists work collaboratively to build robust, scalable, and innovative software that drives business success. Whether it’s developing cutting-edge mobile applications, enterprise-level solutions, or cloud-based platforms, TechWave Innovations is at the forefront of technology, delivering excellence every step of the way.  Join us on our journey to redefine what’s possible in the digital world. With TechWave Innovations, your vision becomes our mission.",
+      "treatment": "Custom Software Development: Tailored solutions to address unique business needs, from mobile apps to enterprise-level systems.  Cloud Solutions: Secure, scalable cloud infrastructure and services to enhance business agility and efficiency.  UI/UX Design: Intuitive and engaging user experiences crafted to boost user satisfaction and retention.  Data Analytics: Advanced analytics and big data solutions to drive informed decision-making and uncover valuable insights.  Cybersecurity: Comprehensive security services to protect data and systems from cyber threats.  IT Consulting: Expert guidance to optimize IT strategy, improve processes, and achieve technology goals.",
+      "based": "ilford",
+      "address": "ilford lane",
+      "postCode": "ig2 7hY",
+      "ID": "",
+      "certificate": ""
     }
   ]
 }
