@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-const API_URL = 'http://localhost:5000/Details';
+const API_URL = 'http://localhost:8000/Details';
 
 const LogPage = () => {
     const [email, setEmail] = useState('');
@@ -16,6 +16,16 @@ const LogPage = () => {
             .then(data => setUsers(data))
             .catch(error => console.error('Error fetching data:', error));
     }, []);
+
+    useEffect(() => {
+        if (error) {
+            const timer = setTimeout(() => {
+                setError('');
+            }, 5000);
+
+            return () => clearTimeout(timer);
+        }
+    }, [error]);
 
     const onSubmit = (e) => {
         e.preventDefault();
